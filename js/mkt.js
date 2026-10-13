@@ -10,7 +10,12 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: servicios 
         }, 500);
-    });
+
+        //si el menu esta visible, simulamos un click en el boton para cerrarlo
+        if ($('.button').is(':visible')) {
+            $('.button').trigger('click');
+        }
+    });   
     
     
    $('#btn-citas').on('click', function(e){
@@ -18,6 +23,10 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: citas 
         }, 500);
+        //contrae o desvanece el menu movil automaticamente
+        if ($('.button').is(':visible')) {
+           $('.button').trigger('click');
+        }
     });
     
      
@@ -26,6 +35,10 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: sobreMi 
         }, 500);
+        //contrae o desvanece el menu movil automaticamente
+         if ($('.button').is(':visible')) {
+            $('.button').trigger('click');
+        }
     });
     
     //scroll elementos del footer
